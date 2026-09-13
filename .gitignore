@@ -1,0 +1,14 @@
+node_modules/
+dist/
+.cache/
+*.log
+npm-debug.log*
+
+# Screenshots are working artifacts, except what the critique process
+# deliberately keeps for the record.
+screenshots/
+*.png
+*.jpg
+*.jpeg
+!docs/critique/**
+!docs/reference/**

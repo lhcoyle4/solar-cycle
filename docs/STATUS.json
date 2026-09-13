@@ -1,8 +1,36 @@
 {
-  "version": "0.0.0",
-  "current_run": {"started_at": "2026-09-13T22:23:57Z", "finished_at": null},
-  "modules": [],
+  "version": "0.0.1",
+  "current_run": {"started_at": "2026-09-13T22:23:57Z", "finished_at": "2026-09-13T22:36:00Z"},
+  "modules": [
+    {
+      "name": "core",
+      "score": null,
+      "round": 0,
+      "passed": false,
+      "open_issues": [
+        "No critic gauntlet has run — core is infrastructure (ECS, event bus, RNG, renderer bootstrap, module isolation) and is not itself visually scored, but its API surface should be reviewed once more modules exist."
+      ]
+    },
+    {
+      "name": "environment",
+      "score": null,
+      "round": 0,
+      "passed": false,
+      "open_issues": [
+        "No critic gauntlet has run yet — manual verification only (see docs/critique/v0.0.1.md).",
+        "Sky turbidity/rayleigh/mie values are rough guesses, not tuned against reference lighting.",
+        "No horizon detail, atmospheric haze layer, clouds, or starfield.",
+        "Ground material is a deterministic-noise placeholder, not a real PBR material set (that's materials/terrain's job)."
+      ]
+    }
+  ],
   "blind_judging": [],
-  "next_target": "bootstrap",
-  "history": []
+  "next_target": "terrain",
+  "history": [
+    {
+      "version": "0.0.1",
+      "date": "2026-09-13",
+      "summary": "Bootstrap: PROMPT.md, README.md, ARCHITECTURE.md, docs/STATUS.json, scripts/release.sh (+tests), .gitignore, ASSETS.md, and a minimal core+environment scaffold (ECS, event bus, seeded RNG, module isolation, a physically-based sky/sun/ground boot scene) with the tools/verify/screenshot.mjs verification loop. No builder/critic gauntlet has run — docs and tooling only, as anticipated for v0.0.1."
+    }
+  ]
 }
